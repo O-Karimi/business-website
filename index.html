@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birlik Company</title>
+    
+    <link rel="icon" type="image/png" href="./assets/birlik-logo.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Vue 3 -->
@@ -60,7 +62,9 @@
                     {{ t.heroButton }}
                 </a>
             </div>
-        </header>        <!-- About Us Section -->
+        </header>
+        
+        <!-- About Us Section -->
         <section id="about" class="py-20 bg-gray-50">
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <h2 class="text-3xl font-bold mb-8">{{ t.aboutTitle }}</h2>
@@ -98,57 +102,47 @@
             </div>
         </section>
 
-       <!-- Products Details Section -->
+        <!-- Products Details Section -->
+        <!-- Products Details Section -->
         <!-- Products Details Section -->
         <section id="products" class="py-20 bg-gray-50">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center mb-12">{{ t.productsTitle }}</h2>
                 
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Product 1 -->
+                    <!-- Product 1: Ceramic Roller -->
                     <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col h-full">
-                        <!-- Image Placeholder (Swap this div for an <img> tag later) -->
-                        <div class="w-full h-48 bg-gray-50 rounded-lg mb-6 flex items-center justify-center border border-gray-100">
-                            <span class="text-4xl grayscale opacity-50">⚙️</span>
-                        </div>
-                        
+                        <img src="./assets/Ceramic Roller.jpeg" alt="Ceramic Roller" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-200">
                         <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.product1Title }}</h3>
                         <p class="text-gray-600 leading-relaxed mb-6 flex-grow">{{ t.product1Desc }}</p>
-                        <a href="#" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center mt-auto">
+<!--                        <a href="./assets/ceramic-roller-specs.pdf" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center mt-auto">
                             {{ t.viewDetailsText }} <span class="ml-2">→</span>
                         </a>
-                    </div>
+-->                    </div>
                     
-                    <!-- Product 2 -->
+                    <!-- Product 2: ACM Roller -->
                     <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col h-full">
-                        <!-- Image Placeholder -->
-                        <div class="w-full h-48 bg-gray-50 rounded-lg mb-6 flex items-center justify-center border border-gray-100">
-                            <span class="text-4xl grayscale opacity-50">⚙️</span>
-                        </div>
-                        
+                        <img src="./assets/ACM Roller.jpeg" alt="ACM Roller Component" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-200">
                         <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.product2Title }}</h3>
                         <p class="text-gray-600 leading-relaxed mb-6 flex-grow">{{ t.product2Desc }}</p>
-                        <a href="#" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center mt-auto">
+                        <a href="./assets/ceramic-roller-specs.pdf" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center mt-auto">
                             {{ t.viewDetailsText }} <span class="ml-2">→</span>
                         </a>
                     </div>
                     
-                    <!-- Product 3 -->
+                    <!-- Product 3: Paraffin Wax -->
                     <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col h-full">
-                        <!-- Image Placeholder -->
-                        <div class="w-full h-48 bg-gray-50 rounded-lg mb-6 flex items-center justify-center border border-gray-100">
-                            <span class="text-4xl grayscale opacity-50">🕯️</span>
-                        </div>
-                        
+                        <img src="./assets/Paraffin Wax.jpeg" alt="Paraffin Wax Slab" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-200">
                         <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.product3Title }}</h3>
                         <p class="text-gray-600 leading-relaxed mb-6 flex-grow">{{ t.product3Desc }}</p>
-                        <a href="#" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center mt-auto">
+                        <a href="./assets/wax" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center mt-auto">
                             {{ t.viewDetailsText }} <span class="ml-2">→</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+        
         <!-- Contact Footer -->
         <footer id="contact" class="bg-gray-900 text-gray-300 py-16 border-t-4 border-orange-500">
             <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
@@ -229,9 +223,9 @@
                 product1Title: "Ceramic Roller",
                 product1Desc: "ACM rollers are widely used in the manufacture of ceramic parts, polished glazed tiles, marble tiles, porcelain tiles, rustic tiles, wall tiles, roof tiles, water-permeable bricks, foam ceramics and containers.",
                 product2Title: "ACM Roller",
-                product2Desc: "[Description placeholder to be filled]",
+                product2Desc: "ACM rollers are engineered in three specialized grades (LTR, MTR, and HTR) to support varying industrial thermal requirements. They feature high load tolerance, exceptional thermal shock resistance, and maximum operating temperatures ranging from 1280°C to 1350°C. These properties ensure a long working life across rigorous applications, including wide body furnaces, nano polishing, and large-area porcelain production.",                
                 product3Title: "Paraffin Wax",
-                product3Desc: "[Description placeholder to be filled]",
+                product3Desc: "Our industrial-grade paraffin wax offers excellent moisture resistance, a consistent melting point, and high purity. It is a vital raw material widely used across diverse manufacturing sectors—including packaging, cosmetics, industrial coatings, and candle production—ensuring reliable performance in demanding applications.",
                 viewDetailsText: "View Specifications",
                 contactTitle: "Contact Information",
                 address: "Sample District, Business Street No:1, Istanbul",
@@ -264,9 +258,9 @@
                 product1Title: "Seramik Rulo",
                 product1Desc: "ACM rulolar, seramik parçalar, cilalı sırlı fayanslar, mermer fayanslar, porselen fayanslar, rustik fayanslar, duvar fayansları, çatı kiremitleri, su geçiren tuğlalar, köpük seramikler ve kapların üretiminde yaygın olarak kullanılmaktadır.",
                 product2Title: "ACM Rulo",
-                product2Desc: "[Açıklama alanı doldurulacak]",
+                product2Desc: "ACM rulolar, farklı endüstriyel ısıl gereksinimleri desteklemek için üç özel sınıfta (LTR, MTR ve HTR) üretilmektedir. Yüksek yük toleransı, olağanüstü termal şok direnci ve 1280°C ile 1350°C arasında değişen maksimum çalışma sıcaklıkları sunarlar. Bu özellikler, geniş gövdeli fırınlar, nano cilalama ve geniş alanlı porselen üretimi dahil olmak üzere zorlu uygulamalarda uzun bir çalışma ömrü sağlar.",
                 product3Title: "Parafin",
-                product3Desc: "[Açıklama alanı doldurulacak]",
+                product3Desc: "Endüstriyel sınıf parafinimiz mükemmel neme dayanıklılık, tutarlı bir erime noktası ve yüksek saflık sunar. Ambalaj, kozmetik, endüstriyel kaplamalar ve mum üretimi dahil olmak üzere çeşitli üretim sektörlerinde yaygın olarak kullanılan ve zorlu uygulamalarda güvenilir performans sağlayan hayati bir hammaddedir.",
                 viewDetailsText: "Özellikleri İncele",
                 contactTitle: "İletişim Bilgileri",
                 address: "Örnek Mahallesi, Şirket Sokak No:1, İstanbul",
