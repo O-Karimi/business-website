@@ -48,29 +48,12 @@
         <!-- About Us Section -->
         <section id="About Us" class="py-20 bg-gray-50">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">{{ t.servicesTitle }}</h2>
+                <h2 class="text-3xl font-bold text-center mb-12">{{ t.aboutTitle }}</h2>
                 
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid md:grid-cols-2 gap-8">
                     <!-- Service 1 -->
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                        <div class="text-blue-600 text-4xl mb-4">⚙️</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service1Title }}</h3>
-                        <p class="text-gray-600 leading-relaxed">{{ t.service1Desc }}</p>
-                    </div>
-                    
-                    <!-- Service 2 -->
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                        <div class="text-blue-600 text-4xl mb-4">📊</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service2Title }}</h3>
-                        <p class="text-gray-600 leading-relaxed">{{ t.service2Desc }}</p>
-                    </div>
-                    
-                    <!-- Service 3 -->
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                        <div class="text-blue-600 text-4xl mb-4">🤝</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service3Title }}</h3>
-                        <p class="text-gray-600 leading-relaxed">{{ t.service3Desc }}</p>
-                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.about1Title }}</h3>
+                    <p class="text-gray-600 leading-relaxed">{{ t.about1Desc }}</p>
                 </div>
             </div>
         </section>
@@ -108,28 +91,28 @@
        <!-- Products Details Section -->
         <section id="Products Details" class="py-20 bg-gray-50">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">{{ t.servicesTitle }}</h2>
+                <h2 class="text-3xl font-bold text-center mb-12">{{ t.productsTitle }}</h2>
                 
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
+                    <!-- Product 1 -->
                     <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
                         <div class="text-blue-600 text-4xl mb-4">⚙️</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service1Title }}</h3>
-                        <p class="text-gray-600 leading-relaxed">{{ t.service1Desc }}</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.product1Title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">{{ t.product1Desc }}</p>
                     </div>
                     
                     <!-- Service 2 -->
                     <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
                         <div class="text-blue-600 text-4xl mb-4">📊</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service2Title }}</h3>
-                        <p class="text-gray-600 leading-relaxed">{{ t.service2Desc }}</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.product2Title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">{{ t.product2Desc }}</p>
                     </div>
                     
                     <!-- Service 3 -->
                     <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
                         <div class="text-blue-600 text-4xl mb-4">🤝</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service3Title }}</h3>
-                        <p class="text-gray-600 leading-relaxed">{{ t.service3Desc }}</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.product3Title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">{{ t.product3Desc }}</p>
                     </div>
                 </div>
             </div>
@@ -167,13 +150,20 @@
         const dictionaries = {
             en: {
                 brandName: "Birlik manufacturing and construction",
+
                 navAboutUs: "About Us",
                 navServices: "Services",
                 navDetails: "Product Deatails",
                 navContact: "Contact",
+
                 heroTitle: "Export Import Has Never Been Easier",
                 heroSubtitle: "Delivering high-quality cylinders, paraffin, and industrial materials from the world to Turkey.",
                 heroButton: "Get in Touch",
+
+                aboutTitle: "About Us",
+                about1Title: "Who We Are",
+                about1Desc: "Birlik is a Turkey-based import and export company specializing in industrial materials, with a current focus on ceramic rollers and paraffin products. Founded with the vision of connecting high quality manufacturing  to global markets, Birlik has become a trusted partner for clients seeking reliability, product integrity, and smooth international trade operations. Our name, Birlik, means unity — and it reflects our philosophy of bringing together manufacturers, industries, and markets through trusted trade relationships.",
+
                 servicesTitle: "Our Services",
                 service1Title: "Export Services",
                 service1Desc: "We export high-quality industrial goods from Turkey to international markets. Our export operations are designed for reliability, flexibility, and efficiency.",
@@ -181,6 +171,15 @@
                 service2Desc: "Birlik provides import solutions for clients in Turkey who require international materials or products.",
                 service3Title: "Custom Trade Solutions",
                 service3Desc: "Birlik offers tailored import/export solutions based on your needs.",
+
+                productsTitle: "Product Details",
+                product1Title: "Ceramic roller",
+                product1Desc: "Rollers ACM rollers are widely used in the manufacture of ceramic parts, polished glazed tiles, marble tiles, porcelain tiles, rustic tiles, wall tiles, roof tiles, water-permeable bricks, foam ceramics and containers.",
+                product2Title: "ACM Roller",
+                product2Desc: "We Should fill here",
+                product3Title: "Parafin Wax",
+                product3Desc: "We should fill here as well",
+
                 contactTitle: "Contact Information",
                 address: "Sample District, Business Street No:1, Istanbul",
                 footerRights: "All rights reserved."
