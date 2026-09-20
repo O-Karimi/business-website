@@ -14,25 +14,22 @@
 <body class="bg-gray-50 text-gray-800 font-sans antialiased scroll-smooth">
     <div id="app">
         <!-- Navigation -->
-        <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="bg-white shadow-sm sticky top-0 z-50 border-b-2 border-yellow-600">
             <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-                <!-- Changed brand color to orange -->
                 <!-- Logo Section -->
                 <a href="#" class="flex items-center">
-                    <!-- Replace the src with your actual filename -->
-                    <img src="./assets/birlik-logo.png" alt="Birlik Logo" class="h-10 w-auto mr-3">
-                    <!-- Optional: Keep the text next to the logo, or delete this span if the logo has text in it -->
-                    <span class="text-2xl font-bold text-orange-600 hidden sm:block">Birlik</span>
+                    <img src="./assets/birlik-logo.png" alt="Birlik Logo" class="h-12 w-auto mr-3">
+                    <span class="text-2xl font-bold text-blue-900 hidden sm:block uppercase tracking-wider">Birlik</span>
                 </a>                
                 <div class="flex items-center space-x-6">
-                    <!-- Updated hover states to orange -->
-                    <a href="#about" class="text-gray-600 hover:text-orange-600 font-medium hidden md:block">{{ t.navAboutUs }}</a>
-                    <a href="#services" class="text-gray-600 hover:text-orange-600 font-medium hidden md:block">{{ t.navServices }}</a>
-                    <a href="#products" class="text-gray-600 hover:text-orange-600 font-medium hidden md:block">{{ t.navDetails }}</a>
-                    <a href="#contact" class="text-gray-600 hover:text-orange-600 font-medium hidden md:block">{{ t.navContact }}</a>
+                    <!-- Updated hover states to gold/yellow -->
+                    <a href="#about" class="text-blue-900 hover:text-yellow-600 font-medium hidden md:block transition">{{ t.navAboutUs }}</a>
+                    <a href="#services" class="text-blue-900 hover:text-yellow-600 font-medium hidden md:block transition">{{ t.navServices }}</a>
+                    <a href="#products" class="text-blue-900 hover:text-yellow-600 font-medium hidden md:block transition">{{ t.navDetails }}</a>
+                    <a href="#contact" class="text-blue-900 hover:text-yellow-600 font-medium hidden md:block transition">{{ t.navContact }}</a>
                     
                     <!-- Language Toggle -->
-                    <button @click="toggleLanguage" class="px-3 py-1 bg-gray-100 rounded-md text-sm font-semibold hover:bg-orange-100 hover:text-orange-700 transition">
+                    <button @click="toggleLanguage" class="px-3 py-1 bg-blue-50 border border-blue-100 rounded-md text-sm font-bold text-blue-900 hover:bg-yellow-50 hover:text-yellow-700 transition">
                         {{ currentLang === 'en' ? 'TR' : 'EN' }}
                     </button>
                 </div>
@@ -40,25 +37,24 @@
         </nav>
 
         <!-- Hero Section -->
-        <!-- Hero Section with Pattern -->
-        <!-- Hero Section with Image Background -->
-        <header class="relative py-32 text-center border-b border-gray-100 overflow-hidden bg-gray-900">
+        <header class="relative py-32 text-center border-b border-gray-100 overflow-hidden bg-blue-950">
             <!-- Background Image -->
             <div class="absolute inset-0 z-0">
-                <img src="https://img.magnific.com/premium-photo/container-cargo-ship-import-export-business-logistic-digital-world-map_35761-293.jpg?semt=ais_hybrid&w=740&q=80" alt="Global Trade Network" class="w-full h-full object-cover opacity-30">
+                <img src="https://img.magnific.com/premium-photo/container-cargo-ship-import-export-business-logistic-digital-world-map_35761-293.jpg?semt=ais_hybrid&w=740&q=80" alt="Global Trade Network" class="w-full h-full object-cover opacity-20">
             </div>
             
-            <!-- Gradient Overlay for Readability -->
-            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/80 to-gray-900/90 z-10"></div>
+            <!-- Gradient Overlay for Readability - Adjusted to match deep blue logo -->
+            <div class="absolute inset-0 bg-gradient-to-b from-blue-950/80 to-blue-950/95 z-10"></div>
 
             <div class="relative max-w-4xl mx-auto px-4 z-20">
                 <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
                     {{ t.heroTitle }}
                 </h1>
-                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
                     {{ t.heroSubtitle }}
                 </p>
-                <a href="#contact" class="inline-block bg-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition shadow-lg hover:shadow-xl">
+                <!-- Button changed to Gold -->
+                <a href="#contact" class="inline-block bg-yellow-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-yellow-500 transition shadow-lg hover:shadow-xl">
                     {{ t.heroButton }}
                 </a>
             </div>
@@ -67,9 +63,9 @@
         <!-- About Us Section -->
         <section id="about" class="py-20 bg-gray-50">
             <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold mb-8">{{ t.aboutTitle }}</h2>
-                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100">
-                    <h3 class="text-2xl font-bold text-orange-600 mb-4">{{ t.about1Title }}</h3>
+                <h2 class="text-3xl font-bold mb-8 text-blue-900">{{ t.aboutTitle }}</h2>
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 border-t-4 border-t-yellow-600">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">{{ t.about1Title }}</h3>
                     <p class="text-gray-600 leading-relaxed text-lg">{{ t.about1Desc }}</p>
                 </div>
             </div>
@@ -78,24 +74,24 @@
         <!-- Our Services Section -->
         <section id="services" class="py-20 bg-white border-t border-b border-gray-100">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">{{ t.servicesTitle }}</h2>
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">{{ t.servicesTitle }}</h2>
                 
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-orange-300 transition group">
-                        <div class="text-orange-500 text-4xl mb-4 group-hover:scale-110 transition-transform">🚢</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service1Title }}</h3>
+                    <div class="bg-blue-50 p-8 rounded-xl border border-blue-100 hover:border-yellow-400 transition group">
+                        <div class="text-yellow-600 text-4xl mb-4 group-hover:scale-110 transition-transform">🚢</div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">{{ t.service1Title }}</h3>
                         <p class="text-gray-600 leading-relaxed">{{ t.service1Desc }}</p>
                     </div>
                     
-                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-orange-300 transition group">
-                        <div class="text-orange-500 text-4xl mb-4 group-hover:scale-110 transition-transform">🛬</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service2Title }}</h3>
+                    <div class="bg-blue-50 p-8 rounded-xl border border-blue-100 hover:border-yellow-400 transition group">
+                        <div class="text-yellow-600 text-4xl mb-4 group-hover:scale-110 transition-transform">🛬</div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">{{ t.service2Title }}</h3>
                         <p class="text-gray-600 leading-relaxed">{{ t.service2Desc }}</p>
                     </div>
                     
-                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-orange-300 transition group">
-                        <div class="text-orange-500 text-4xl mb-4 group-hover:scale-110 transition-transform">🤝</div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service3Title }}</h3>
+                    <div class="bg-blue-50 p-8 rounded-xl border border-blue-100 hover:border-yellow-400 transition group">
+                        <div class="text-yellow-600 text-4xl mb-4 group-hover:scale-110 transition-transform">🤝</div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">{{ t.service3Title }}</h3>
                         <p class="text-gray-600 leading-relaxed">{{ t.service3Desc }}</p>
                     </div>
                 </div>
@@ -103,39 +99,37 @@
         </section>
 
         <!-- Products Details Section -->
-        <!-- Products Details Section -->
-        <!-- Products Details Section -->
         <section id="products" class="py-20 bg-gray-50">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">{{ t.productsTitle }}</h2>
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">{{ t.productsTitle }}</h2>
                 
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Product 1: Ceramic Roller -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col h-full">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col h-full border-b-4 border-b-transparent hover:border-b-yellow-600">
                         <img src="./assets/Ceramic Roller.jpeg" alt="Ceramic Roller" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.product1Title }}</h3>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">{{ t.product1Title }}</h3>
                         <p class="text-gray-600 leading-relaxed mb-6 flex-grow">{{ t.product1Desc }}</p>
-<!--                        <a href="./assets/ceramic-roller-specs.pdf" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center mt-auto">
+<!--                        <a href="./assets/ceramic-roller-specs.pdf" class="text-yellow-600 font-bold hover:text-yellow-700 inline-flex items-center mt-auto">
                             {{ t.viewDetailsText }} <span class="ml-2">→</span>
                         </a>
 -->                    </div>
                     
                     <!-- Product 2: ACM Roller -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col h-full">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col h-full border-b-4 border-b-transparent hover:border-b-yellow-600">
                         <img src="./assets/ACM Roller.jpeg" alt="ACM Roller Component" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.product2Title }}</h3>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">{{ t.product2Title }}</h3>
                         <p class="text-gray-600 leading-relaxed mb-6 flex-grow">{{ t.product2Desc }}</p>
-                        <a href="./assets/ceramic-roller-specs.pdf" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center mt-auto">
+                        <a href="./assets/ceramic-roller-specs.pdf" class="text-yellow-600 font-bold hover:text-yellow-700 inline-flex items-center mt-auto">
                             {{ t.viewDetailsText }} <span class="ml-2">→</span>
                         </a>
                     </div>
                     
                     <!-- Product 3: Paraffin Wax -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col h-full">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col h-full border-b-4 border-b-transparent hover:border-b-yellow-600">
                         <img src="./assets/Paraffin Wax.jpeg" alt="Paraffin Wax Slab" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.product3Title }}</h3>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">{{ t.product3Title }}</h3>
                         <p class="text-gray-600 leading-relaxed mb-6 flex-grow">{{ t.product3Desc }}</p>
-                        <a href="./assets/wax" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center mt-auto">
+                        <a href="./assets/wax" class="text-yellow-600 font-bold hover:text-yellow-700 inline-flex items-center mt-auto">
                             {{ t.viewDetailsText }} <span class="ml-2">→</span>
                         </a>
                     </div>
@@ -144,58 +138,58 @@
         </section>
         
         <!-- Contact Footer -->
-        <footer id="contact" class="bg-gray-900 text-gray-300 py-16 border-t-4 border-orange-500">
+        <footer id="contact" class="bg-blue-950 text-gray-300 py-16 border-t-4 border-yellow-600">
             <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
                 <!-- Contact Details -->
                 <div>
                     <h2 class="text-2xl font-bold text-white mb-6">{{ t.contactTitle }}</h2>
                     <ul class="space-y-4 mb-8">
-                        <li class="flex items-center hover:text-orange-400 transition">
+                        <li class="flex items-center hover:text-yellow-500 transition">
                             <span class="mr-3 text-xl">📍</span> {{ t.address }}
                         </li>
-                        <li class="flex items-center hover:text-orange-400 transition">
+                        <li class="flex items-center hover:text-yellow-500 transition">
                             <span class="mr-3 text-xl">📞</span> +90 552 131 88 10
                         </li>
-                        <li class="flex items-center hover:text-orange-400 transition">
+                        <li class="flex items-center hover:text-yellow-500 transition">
                             <span class="mr-3 text-xl">✉️</span> contact@birlik.com
                         </li>
                     </ul>
                 </div>
                 
                 <!-- Contact Form -->
-                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                <div class="bg-blue-900 p-6 rounded-xl border border-blue-800 shadow-inner">
                     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                        <!-- Replace this placeholder with your actual access key from Web3Forms -->
                         <input type="hidden" name="access_key" value="fb986f3f-45d4-4aff-8580-95812925729a">
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">                        
                         <div>
-                            <label for="name" class="block text-sm font-medium text-gray-400 mb-1">{{ t.formName }}</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-gray-900 border border-gray-600 rounded-md text-white focus:outline-none focus:border-orange-500">
+                            <label for="name" class="block text-sm font-medium text-blue-200 mb-1">{{ t.formName }}</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-blue-950 border border-blue-800 rounded-md text-white focus:outline-none focus:border-yellow-500">
                         </div>
                         
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-400 mb-1">{{ t.formEmail }}</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-gray-900 border border-gray-600 rounded-md text-white focus:outline-none focus:border-orange-500">
+                            <label for="email" class="block text-sm font-medium text-blue-200 mb-1">{{ t.formEmail }}</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-blue-950 border border-blue-800 rounded-md text-white focus:outline-none focus:border-yellow-500">
                         </div>
                         
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-400 mb-1">{{ t.formMessage }}</label>
-                            <textarea id="message" name="message" rows="3" required class="w-full px-4 py-2 bg-gray-900 border border-gray-600 rounded-md text-white focus:outline-none focus:border-orange-500"></textarea>
+                            <label for="message" class="block text-sm font-medium text-blue-200 mb-1">{{ t.formMessage }}</label>
+                            <textarea id="message" name="message" rows="3" required class="w-full px-4 py-2 bg-blue-950 border border-blue-800 rounded-md text-white focus:outline-none focus:border-yellow-500"></textarea>
                         </div>
                         
-                        <button type="submit" class="w-full bg-orange-500 text-white font-bold py-3 px-4 rounded-md hover:bg-orange-600 transition">
+                        <button type="submit" class="w-full bg-yellow-600 text-white font-bold py-3 px-4 rounded-md hover:bg-yellow-500 transition">
                             {{ t.formSubmit }}
                         </button>
                     </form>
                 </div>
             </div>
             
-            <div class="max-w-6xl mx-auto px-4 mt-12 pt-8 border-t border-gray-800 flex justify-between items-center">
-                <p class="text-gray-500 text-sm">© 2026. {{ t.footerRights }}</p>
+            <div class="max-w-6xl mx-auto px-4 mt-12 pt-8 border-t border-blue-900 flex justify-between items-center">
+                <p class="text-blue-300 text-sm">© 2026. {{ t.footerRights }}</p>
             </div>
         </footer>
     </div>
 
+    <!-- Vue Dictionary Script remains exactly as you had it -->
     <script>
         const { createApp, ref, computed } = Vue;
 
@@ -228,7 +222,7 @@
                 product3Desc: "Our industrial-grade paraffin wax offers excellent moisture resistance, a consistent melting point, and high purity. It is a vital raw material widely used across diverse manufacturing sectors—including packaging, cosmetics, industrial coatings, and candle production—ensuring reliable performance in demanding applications.",
                 viewDetailsText: "View Specifications",
                 contactTitle: "Contact Information",
-                address: "Esentepe mah.milangaz cad. Vizyon dumankaya Kartal, A1 blok. no:2 , Kartal/İstanbul",
+                address: "Orhantepe Mah. itit Sk. No 2 B-90 , Kartal/İstanbul",
                 footerRights: "All rights reserved.",
                 formName: "Your Name",
                 formEmail: "Your Email",
@@ -263,7 +257,7 @@
                 product3Desc: "Endüstriyel sınıf parafinimiz mükemmel neme dayanıklılık, tutarlı bir erime noktası ve yüksek saflık sunar. Ambalaj, kozmetik, endüstriyel kaplamalar ve mum üretimi dahil olmak üzere çeşitli üretim sektörlerinde yaygın olarak kullanılan ve zorlu uygulamalarda güvenilir performans sağlayan hayati bir hammaddedir.",
                 viewDetailsText: "Özellikleri İncele",
                 contactTitle: "İletişim Bilgileri",
-                address: "Esentepe mah.milangaz cad. Vizyon dumankaya Kartal, A1 blok. no:2 , Kartal/İstanbul",
+                address: "Orhantepe Mah. itit Sk. No 2 B-90 , Kartal/İstanbul",
                 footerRights: "Tüm hakları saklıdır.",
                 formName: "Adınız",
                 formEmail: "E-posta Adresiniz",
