@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Gateway</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-600">{{ t.brandName }}</div>
+                
+                <div class="flex items-center space-x-6">
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 font-medium hidden md:block">{{ t.navServices }}</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium hidden md:block">{{ t.navContact }}</a>
+                    
+                    <!-- Language Toggle -->
+                    <button @click="toggleLanguage" class="px-3 py-1 bg-gray-100 rounded-md text-sm font-semibold hover:bg-gray-200 transition">
+                        {{ currentLang === 'en' ? 'TR' : 'EN' }}
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="bg-white py-24 text-center border-b border-gray-100">
+            <div class="max-w-4xl mx-auto px-4">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
+                    {{ t.heroTitle }}
+                </h1>
+                <p class="text-xl text-gray-500 mb-10 max-w-2xl mx-auto">
+                    {{ t.heroSubtitle }}
+                </p>
+                <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-xl">
+                    {{ t.heroButton }}
+                </a>
+            </div>
+        </header>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">{{ t.servicesTitle }}</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-blue-600 text-4xl mb-4">⚙️</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service1Title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">{{ t.service1Desc }}</p>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-blue-600 text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service2Title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">{{ t.service2Desc }}</p>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-blue-600 text-4xl mb-4">🤝</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service3Title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">{{ t.service3Desc }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Footer -->
+        <footer id="contact" class="bg-gray-900 text-gray-300 py-16">
+            <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-6">{{ t.contactTitle }}</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <span class="mr-3 text-xl">📍</span> {{ t.address }}
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-3 text-xl">📞</span> +90 212 123 45 67
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-3 text-xl">✉️</span> info@yourcompany.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:text-right flex flex-col justify-end">
+                    <h3 class="text-2xl font-bold text-white mb-2">{{ t.brandName }}</h3>
+                    <p class="text-gray-500">© 2026. {{ t.footerRights }}</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const { createApp, ref, computed } = Vue;
+
+        // Dictionaries for both languages
+        const dictionaries = {
+            en: {
+                brandName: "Acme Corp",
+                navServices: "Services",
+                navContact: "Contact",
+                heroTitle: "Adding Value to Your Business",
+                heroSubtitle: "Maximize your company's potential with our professional services. Fast, reliable, and modern solutions tailored for you.",
+                heroButton: "Get in Touch",
+                servicesTitle: "What We Do",
+                service1Title: "Operational Strategy",
+                service1Desc: "Streamlining your workflows to improve efficiency and reduce overhead costs.",
+                service2Title: "Market Analysis",
+                service2Desc: "Deep data insights to help you understand your competitors and target audience.",
+                service3Title: "Dedicated Support",
+                service3Desc: "A dedicated team ready to assist you round the clock with any challenges.",
+                contactTitle: "Contact Information",
+                address: "Sample District, Business Street No:1, Istanbul",
+                footerRights: "All rights reserved."
+            },
+            tr: {
+                brandName: "Acme A.Ş.",
+                navServices: "Hizmetler",
+                navContact: "İletişim",
+                heroTitle: "İşinize Değer Katıyoruz",
+                heroSubtitle: "Profesyonel hizmetlerimizle şirketinizin potansiyelini en üst düzeye çıkarın. Hızlı, güvenilir ve modern çözümler.",
+                heroButton: "Bize Ulaşın",
+                servicesTitle: "Neler Yapıyoruz",
+                service1Title: "Operasyonel Strateji",
+                service1Desc: "Verimliliği artırmak ve genel giderleri azaltmak için iş akışlarınızı kolaylaştırıyoruz.",
+                service2Title: "Piyasa Analizi",
+                service2Desc: "Rakiplerinizi ve hedef kitlenizi anlamanıza yardımcı olacak derin veri içgörüleri.",
+                service3Title: "Özel Destek",
+                service3Desc: "Her türlü zorlukta size günün her saati yardımcı olmaya hazır özel bir ekip.",
+                contactTitle: "İletişim Bilgileri",
+                address: "Örnek Mahallesi, Şirket Sokak No:1, İstanbul",
+                footerRights: "Tüm hakları saklıdır."
+            }
+        };
+
+        createApp({
+            setup() {
+                // Set default language
+                const currentLang = ref('en');
+
+                // Computed property that returns the active dictionary
+                const t = computed(() => dictionaries[currentLang.value]);
+
+                // Function to toggle language
+                const toggleLanguage = () => {
+                    currentLang.value = currentLang.value === 'en' ? 'tr' : 'en';
+                    // Optional: Update the HTML lang attribute for accessibility
+                    document.documentElement.lang = currentLang.value;
+                };
+
+                return {
+                    currentLang,
+                    t,
+                    toggleLanguage
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
