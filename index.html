@@ -39,26 +39,28 @@
 
         <!-- Hero Section -->
         <!-- Hero Section with Pattern -->
-        <header class="relative py-32 text-center border-b border-gray-100 overflow-hidden bg-gray-50">
-            <!-- This creates a faint dot pattern using Tailwind utility classes and inline styles -->
-            <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 2px 2px, black 1px, transparent 0); background-size: 24px 24px;"></div>
+        <!-- Hero Section with Image Background -->
+        <header class="relative py-32 text-center border-b border-gray-100 overflow-hidden bg-gray-900">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://img.magnific.com/premium-photo/container-cargo-ship-import-export-business-logistic-digital-world-map_35761-293.jpg?semt=ais_hybrid&w=740&q=80" alt="Global Trade Network" class="w-full h-full object-cover opacity-30">
+            </div>
             
-            <!-- This gradient adds a subtle orange glow at the top -->
-            <div class="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-orange-100/50 to-transparent"></div>
+            <!-- Gradient Overlay for Readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/80 to-gray-900/90 z-10"></div>
 
-            <div class="relative max-w-4xl mx-auto px-4 z-10">
-                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
+            <div class="relative max-w-4xl mx-auto px-4 z-20">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
                     {{ t.heroTitle }}
                 </h1>
-                <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                     {{ t.heroSubtitle }}
                 </p>
                 <a href="#contact" class="inline-block bg-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition shadow-lg hover:shadow-xl">
                     {{ t.heroButton }}
                 </a>
             </div>
-        </header>
-        <!-- About Us Section -->
+        </header>        <!-- About Us Section -->
         <section id="about" class="py-20 bg-gray-50">
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <h2 class="text-3xl font-bold mb-8">{{ t.aboutTitle }}</h2>
@@ -147,7 +149,7 @@
                 </div>
             </div>
         </section>
-<!-- Contact Footer -->
+        <!-- Contact Footer -->
         <footer id="contact" class="bg-gray-900 text-gray-300 py-16 border-t-4 border-orange-500">
             <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
                 <!-- Contact Details -->
@@ -171,7 +173,7 @@
                     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
                         <!-- Replace this placeholder with your actual access key from Web3Forms -->
                         <input type="hidden" name="access_key" value="fb986f3f-45d4-4aff-8580-95812925729a">
-                        
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">                        
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-400 mb-1">{{ t.formName }}</label>
                             <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-gray-900 border border-gray-600 rounded-md text-white focus:outline-none focus:border-orange-500">
