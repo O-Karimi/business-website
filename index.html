@@ -9,21 +9,28 @@
     <!-- Vue 3 -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased scroll-smooth">
     <div id="app">
         <!-- Navigation -->
         <nav class="bg-white shadow-sm sticky top-0 z-50">
             <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-                <div class="text-2xl font-bold text-blue-600">{{ t.brandName }}</div>
-                
+                <!-- Changed brand color to orange -->
+                <!-- Logo Section -->
+                <a href="#" class="flex items-center">
+                    <!-- Replace the src with your actual filename -->
+                    <img src="./assets/birlik-logo.png" alt="Birlik Logo" class="h-10 w-auto mr-3">
+                    <!-- Optional: Keep the text next to the logo, or delete this span if the logo has text in it -->
+                    <span class="text-2xl font-bold text-orange-600 hidden sm:block">Birlik</span>
+                </a>                
                 <div class="flex items-center space-x-6">
-                    <a href="#About Us" class="text-gray-600 hover:text-blue-600 font-medium hidden md:block">{{ t.navAboutUs }}</a>
-                    <a href="#Our Services" class="text-gray-600 hover:text-blue-600 font-medium hidden md:block">{{ t.navServices }}</a>
-                    <a href="#Products Details" class="text-gray-600 hover:text-blue-600 font-medium hidden md:block">{{ t.navDetails }}</a>
-                    <a href="#Contact" class="text-gray-600 hover:text-blue-600 font-medium hidden md:block">{{ t.navContact }}</a>
+                    <!-- Updated hover states to orange -->
+                    <a href="#about" class="text-gray-600 hover:text-orange-600 font-medium hidden md:block">{{ t.navAboutUs }}</a>
+                    <a href="#services" class="text-gray-600 hover:text-orange-600 font-medium hidden md:block">{{ t.navServices }}</a>
+                    <a href="#products" class="text-gray-600 hover:text-orange-600 font-medium hidden md:block">{{ t.navDetails }}</a>
+                    <a href="#contact" class="text-gray-600 hover:text-orange-600 font-medium hidden md:block">{{ t.navContact }}</a>
                     
                     <!-- Language Toggle -->
-                    <button @click="toggleLanguage" class="px-3 py-1 bg-gray-100 rounded-md text-sm font-semibold hover:bg-gray-200 transition">
+                    <button @click="toggleLanguage" class="px-3 py-1 bg-gray-100 rounded-md text-sm font-semibold hover:bg-orange-100 hover:text-orange-700 transition">
                         {{ currentLang === 'en' ? 'TR' : 'EN' }}
                     </button>
                 </div>
@@ -36,51 +43,47 @@
                 <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
                     {{ t.heroTitle }}
                 </h1>
-                <p class="text-xl text-gray-500 mb-10 max-w-2xl mx-auto">
+                <p class="text-xl text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed">
                     {{ t.heroSubtitle }}
                 </p>
-                <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-xl">
+                <!-- Updated button to orange -->
+                <a href="#contact" class="inline-block bg-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition shadow-lg hover:shadow-xl">
                     {{ t.heroButton }}
                 </a>
             </div>
         </header>
 
         <!-- About Us Section -->
-        <section id="About Us" class="py-20 bg-gray-50">
-            <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">{{ t.aboutTitle }}</h2>
-                
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Service 1 -->
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.about1Title }}</h3>
-                    <p class="text-gray-600 leading-relaxed">{{ t.about1Desc }}</p>
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-8">{{ t.aboutTitle }}</h2>
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-4">{{ t.about1Title }}</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">{{ t.about1Desc }}</p>
                 </div>
             </div>
         </section>
 
         <!-- Our Services Section -->
-        <section id="Our Services" class="py-20 bg-gray-50">
+        <section id="services" class="py-20 bg-white border-t border-b border-gray-100">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center mb-12">{{ t.servicesTitle }}</h2>
                 
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                        <div class="text-blue-600 text-4xl mb-4">⚙️</div>
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-orange-300 transition group">
+                        <div class="text-orange-500 text-4xl mb-4 group-hover:scale-110 transition-transform">🚢</div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service1Title }}</h3>
                         <p class="text-gray-600 leading-relaxed">{{ t.service1Desc }}</p>
                     </div>
                     
-                    <!-- Service 2 -->
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                        <div class="text-blue-600 text-4xl mb-4">📊</div>
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-orange-300 transition group">
+                        <div class="text-orange-500 text-4xl mb-4 group-hover:scale-110 transition-transform">🛬</div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service2Title }}</h3>
                         <p class="text-gray-600 leading-relaxed">{{ t.service2Desc }}</p>
                     </div>
                     
-                    <!-- Service 3 -->
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                        <div class="text-blue-600 text-4xl mb-4">🤝</div>
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-orange-300 transition group">
+                        <div class="text-orange-500 text-4xl mb-4 group-hover:scale-110 transition-transform">🤝</div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service3Title }}</h3>
                         <p class="text-gray-600 leading-relaxed">{{ t.service3Desc }}</p>
                     </div>
@@ -89,55 +92,66 @@
         </section>
 
        <!-- Products Details Section -->
-        <section id="Products Details" class="py-20 bg-gray-50">
+        <section id="products" class="py-20 bg-gray-50">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center mb-12">{{ t.productsTitle }}</h2>
                 
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Product 1 -->
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                        <div class="text-blue-600 text-4xl mb-4">⚙️</div>
+                    <!-- Product 1 with Link -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col h-full">
+                        <div class="text-orange-500 text-4xl mb-4">⚙️</div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.product1Title }}</h3>
-                        <p class="text-gray-600 leading-relaxed">{{ t.product1Desc }}</p>
+                        <p class="text-gray-600 leading-relaxed mb-6 flex-grow">{{ t.product1Desc }}</p>
+                        <!-- Dummy Link Placeholder -->
+                        <a href="#" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center">
+                            {{ t.viewDetailsText }} <span class="ml-2">→</span>
+                        </a>
                     </div>
                     
-                    <!-- Service 2 -->
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                        <div class="text-blue-600 text-4xl mb-4">📊</div>
+                    <!-- Product 2 with Link -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col h-full">
+                        <div class="text-orange-500 text-4xl mb-4">⚙️</div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.product2Title }}</h3>
-                        <p class="text-gray-600 leading-relaxed">{{ t.product2Desc }}</p>
+                        <p class="text-gray-600 leading-relaxed mb-6 flex-grow">{{ t.product2Desc }}</p>
+                        <!-- Dummy Link Placeholder -->
+                        <a href="#" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center">
+                            {{ t.viewDetailsText }} <span class="ml-2">→</span>
+                        </a>
                     </div>
                     
-                    <!-- Service 3 -->
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                        <div class="text-blue-600 text-4xl mb-4">🤝</div>
+                    <!-- Product 3 with Link -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col h-full">
+                        <div class="text-orange-500 text-4xl mb-4">🕯️</div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.product3Title }}</h3>
-                        <p class="text-gray-600 leading-relaxed">{{ t.product3Desc }}</p>
+                        <p class="text-gray-600 leading-relaxed mb-6 flex-grow">{{ t.product3Desc }}</p>
+                        <!-- Dummy Link Placeholder -->
+                        <a href="#" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center">
+                            {{ t.viewDetailsText }} <span class="ml-2">→</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Footer -->
-        <footer id="Contact" class="bg-gray-900 text-gray-300 py-16">
+        <footer id="contact" class="bg-gray-900 text-gray-300 py-16 border-t-4 border-orange-500">
             <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
                 <div>
                     <h2 class="text-2xl font-bold text-white mb-6">{{ t.contactTitle }}</h2>
                     <ul class="space-y-4">
-                        <li class="flex items-center">
+                        <li class="flex items-center hover:text-orange-400 transition">
                             <span class="mr-3 text-xl">📍</span> {{ t.address }}
                         </li>
-                        <li class="flex items-center">
+                        <li class="flex items-center hover:text-orange-400 transition">
                             <span class="mr-3 text-xl">📞</span> +90 212 123 45 67
                         </li>
-                        <li class="flex items-center">
-                            <span class="mr-3 text-xl">✉️</span> info@yourcompany.com
+                        <li class="flex items-center hover:text-orange-400 transition">
+                            <span class="mr-3 text-xl">✉️</span> info@birlik.com
                         </li>
                     </ul>
                 </div>
                 <div class="md:text-right flex flex-col justify-end">
-                    <h3 class="text-2xl font-bold text-white mb-2">{{ t.brandName }}</h3>
-                    <p class="text-gray-500">© 2026. {{ t.footerRights }}</p>
+                    <img src="./assets/birlik-logo.png" alt="Birlik Logo" class="h-8 w-auto mb-4 ml-auto">                    <p class="text-gray-500">© 2026. {{ t.footerRights }}</p>
                 </div>
             </div>
         </footer>
@@ -146,58 +160,65 @@
     <script>
         const { createApp, ref, computed } = Vue;
 
-        // Dictionaries for both languages
         const dictionaries = {
             en: {
-                brandName: "Birlik manufacturing and construction",
-
+                brandName: "Birlik Manufacturing and Construction",
                 navAboutUs: "About Us",
                 navServices: "Services",
-                navDetails: "Product Deatails",
+                navDetails: "Products",
                 navContact: "Contact",
-
-                heroTitle: "Export Import Has Never Been Easier",
+                heroTitle: "Export & Import Has Never Been Easier",
                 heroSubtitle: "Delivering high-quality cylinders, paraffin, and industrial materials from the world to Turkey.",
                 heroButton: "Get in Touch",
-
                 aboutTitle: "About Us",
                 about1Title: "Who We Are",
-                about1Desc: "Birlik is a Turkey-based import and export company specializing in industrial materials, with a current focus on ceramic rollers and paraffin products. Founded with the vision of connecting high quality manufacturing  to global markets, Birlik has become a trusted partner for clients seeking reliability, product integrity, and smooth international trade operations. Our name, Birlik, means unity — and it reflects our philosophy of bringing together manufacturers, industries, and markets through trusted trade relationships.",
-
+                about1Desc: "Birlik is a Turkey-based import and export company specializing in industrial materials, with a current focus on ceramic rollers and paraffin products. Founded with the vision of connecting high quality manufacturing to global markets, Birlik has become a trusted partner for clients seeking reliability, product integrity, and smooth international trade operations. Our name, Birlik, means unity — and it reflects our philosophy of bringing together manufacturers, industries, and markets through trusted trade relationships.",
                 servicesTitle: "Our Services",
                 service1Title: "Export Services",
                 service1Desc: "We export high-quality industrial goods from Turkey to international markets. Our export operations are designed for reliability, flexibility, and efficiency.",
                 service2Title: "Import Services",
                 service2Desc: "Birlik provides import solutions for clients in Turkey who require international materials or products.",
                 service3Title: "Custom Trade Solutions",
-                service3Desc: "Birlik offers tailored import/export solutions based on your needs.",
-
+                service3Desc: "Birlik offers tailored import/export solutions based on your specific industrial needs.",
                 productsTitle: "Product Details",
-                product1Title: "Ceramic roller",
-                product1Desc: "Rollers ACM rollers are widely used in the manufacture of ceramic parts, polished glazed tiles, marble tiles, porcelain tiles, rustic tiles, wall tiles, roof tiles, water-permeable bricks, foam ceramics and containers.",
+                product1Title: "Ceramic Roller",
+                product1Desc: "ACM rollers are widely used in the manufacture of ceramic parts, polished glazed tiles, marble tiles, porcelain tiles, rustic tiles, wall tiles, roof tiles, water-permeable bricks, foam ceramics and containers.",
                 product2Title: "ACM Roller",
-                product2Desc: "We Should fill here",
-                product3Title: "Parafin Wax",
-                product3Desc: "We should fill here as well",
-
+                product2Desc: "[Description placeholder to be filled]",
+                product3Title: "Paraffin Wax",
+                product3Desc: "[Description placeholder to be filled]",
+                viewDetailsText: "View Specifications",
                 contactTitle: "Contact Information",
                 address: "Sample District, Business Street No:1, Istanbul",
                 footerRights: "All rights reserved."
             },
             tr: {
-                brandName: "Acme A.Ş.",
+                brandName: "Birlik İmalat ve İnşaat",
+                navAboutUs: "Hakkımızda",
                 navServices: "Hizmetler",
+                navDetails: "Ürünler",
                 navContact: "İletişim",
-                heroTitle: "İşinize Değer Katıyoruz",
-                heroSubtitle: "Profesyonel hizmetlerimizle şirketinizin potansiyelini en üst düzeye çıkarın. Hızlı, güvenilir ve modern çözümler.",
+                heroTitle: "İhracat ve İthalat Hiç Bu Kadar Kolay Olmamıştı",
+                heroSubtitle: "Dünyadan Türkiye'ye yüksek kaliteli silindirler, parafin ve endüstriyel malzemeler tedarik ediyoruz.",
                 heroButton: "Bize Ulaşın",
-                servicesTitle: "Neler Yapıyoruz",
-                service1Title: "Operasyonel Strateji",
-                service1Desc: "Verimliliği artırmak ve genel giderleri azaltmak için iş akışlarınızı kolaylaştırıyoruz.",
-                service2Title: "Piyasa Analizi",
-                service2Desc: "Rakiplerinizi ve hedef kitlenizi anlamanıza yardımcı olacak derin veri içgörüleri.",
-                service3Title: "Özel Destek",
-                service3Desc: "Her türlü zorlukta size günün her saati yardımcı olmaya hazır özel bir ekip.",
+                aboutTitle: "Hakkımızda",
+                about1Title: "Biz Kimiz",
+                about1Desc: "Birlik, endüstriyel malzemeler konusunda uzmanlaşmış, şu anda seramik rulolar ve parafin ürünlerine odaklanan Türkiye merkezli bir ithalat ve ihracat şirketidir. Yüksek kaliteli üretimi küresel pazarlara bağlama vizyonuyla kurulan Birlik, güvenilirlik, ürün bütünlüğü ve sorunsuz uluslararası ticaret operasyonları arayan müşteriler için güvenilir bir ortak haline gelmiştir. Adımız olan Birlik, felsefemizi yansıtır; üreticileri, endüstrileri ve pazarları güvenilir ticaret ilişkileri aracılığıyla bir araya getiriyoruz.",
+                servicesTitle: "Hizmetlerimiz",
+                service1Title: "İhracat Hizmetleri",
+                service1Desc: "Türkiye'den uluslararası pazarlara yüksek kaliteli endüstriyel ürünler ihraç ediyoruz. İhracat operasyonlarımız güvenilirlik, esneklik ve verimlilik için tasarlanmıştır.",
+                service2Title: "İthalat Hizmetleri",
+                service2Desc: "Birlik, uluslararası malzeme veya ürünlere ihtiyaç duyan Türkiye'deki müşteriler için ithalat çözümleri sunar.",
+                service3Title: "Özel Ticaret Çözümleri",
+                service3Desc: "Birlik, özel endüstriyel ihtiyaçlarınıza göre uyarlanmış ithalat/ihracat çözümleri sunar.",
+                productsTitle: "Ürün Detayları",
+                product1Title: "Seramik Rulo",
+                product1Desc: "ACM rulolar, seramik parçalar, cilalı sırlı fayanslar, mermer fayanslar, porselen fayanslar, rustik fayanslar, duvar fayansları, çatı kiremitleri, su geçiren tuğlalar, köpük seramikler ve kapların üretiminde yaygın olarak kullanılmaktadır.",
+                product2Title: "ACM Rulo",
+                product2Desc: "[Açıklama alanı doldurulacak]",
+                product3Title: "Parafin",
+                product3Desc: "[Açıklama alanı doldurulacak]",
+                viewDetailsText: "Özellikleri İncele",
                 contactTitle: "İletişim Bilgileri",
                 address: "Örnek Mahallesi, Şirket Sokak No:1, İstanbul",
                 footerRights: "Tüm hakları saklıdır."
@@ -206,24 +227,15 @@
 
         createApp({
             setup() {
-                // Set default language
                 const currentLang = ref('en');
-
-                // Computed property that returns the active dictionary
                 const t = computed(() => dictionaries[currentLang.value]);
 
-                // Function to toggle language
                 const toggleLanguage = () => {
                     currentLang.value = currentLang.value === 'en' ? 'tr' : 'en';
-                    // Optional: Update the HTML lang attribute for accessibility
                     document.documentElement.lang = currentLang.value;
                 };
 
-                return {
-                    currentLang,
-                    t,
-                    toggleLanguage
-                }
+                return { currentLang, t, toggleLanguage }
             }
         }).mount('#app')
     </script>
