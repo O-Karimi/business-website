@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Gateway</title>
+    <title>Birlik Company</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Vue 3 -->
@@ -17,8 +17,10 @@
                 <div class="text-2xl font-bold text-blue-600">{{ t.brandName }}</div>
                 
                 <div class="flex items-center space-x-6">
-                    <a href="#services" class="text-gray-600 hover:text-blue-600 font-medium hidden md:block">{{ t.navServices }}</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium hidden md:block">{{ t.navContact }}</a>
+                    <a href="#About Us" class="text-gray-600 hover:text-blue-600 font-medium hidden md:block">{{ t.navAboutUs }}</a>
+                    <a href="#Our Services" class="text-gray-600 hover:text-blue-600 font-medium hidden md:block">{{ t.navServices }}</a>
+                    <a href="#Products Details" class="text-gray-600 hover:text-blue-600 font-medium hidden md:block">{{ t.navDetails }}</a>
+                    <a href="#Contact" class="text-gray-600 hover:text-blue-600 font-medium hidden md:block">{{ t.navContact }}</a>
                     
                     <!-- Language Toggle -->
                     <button @click="toggleLanguage" class="px-3 py-1 bg-gray-100 rounded-md text-sm font-semibold hover:bg-gray-200 transition">
@@ -43,8 +45,68 @@
             </div>
         </header>
 
-        <!-- Services Section -->
-        <section id="services" class="py-20 bg-gray-50">
+        <!-- About Us Section -->
+        <section id="About Us" class="py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">{{ t.servicesTitle }}</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-blue-600 text-4xl mb-4">⚙️</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service1Title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">{{ t.service1Desc }}</p>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-blue-600 text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service2Title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">{{ t.service2Desc }}</p>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-blue-600 text-4xl mb-4">🤝</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service3Title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">{{ t.service3Desc }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="Our Services" class="py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">{{ t.servicesTitle }}</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-blue-600 text-4xl mb-4">⚙️</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service1Title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">{{ t.service1Desc }}</p>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-blue-600 text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service2Title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">{{ t.service2Desc }}</p>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-blue-600 text-4xl mb-4">🤝</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ t.service3Title }}</h3>
+                        <p class="text-gray-600 leading-relaxed">{{ t.service3Desc }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- Products Details Section -->
+        <section id="Products Details" class="py-20 bg-gray-50">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center mb-12">{{ t.servicesTitle }}</h2>
                 
@@ -74,7 +136,7 @@
         </section>
 
         <!-- Contact Footer -->
-        <footer id="contact" class="bg-gray-900 text-gray-300 py-16">
+        <footer id="Contact" class="bg-gray-900 text-gray-300 py-16">
             <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
                 <div>
                     <h2 class="text-2xl font-bold text-white mb-6">{{ t.contactTitle }}</h2>
@@ -104,19 +166,21 @@
         // Dictionaries for both languages
         const dictionaries = {
             en: {
-                brandName: "Acme Corp",
+                brandName: "Birlik manufacturing and construction",
+                navAboutUs: "About Us",
                 navServices: "Services",
+                navDetails: "Product Deatails",
                 navContact: "Contact",
-                heroTitle: "Adding Value to Your Business",
-                heroSubtitle: "Maximize your company's potential with our professional services. Fast, reliable, and modern solutions tailored for you.",
+                heroTitle: "Export Import Has Never Been Easier",
+                heroSubtitle: "Delivering high-quality cylinders, paraffin, and industrial materials from the world to Turkey.",
                 heroButton: "Get in Touch",
-                servicesTitle: "What We Do",
-                service1Title: "Operational Strategy",
-                service1Desc: "Streamlining your workflows to improve efficiency and reduce overhead costs.",
-                service2Title: "Market Analysis",
-                service2Desc: "Deep data insights to help you understand your competitors and target audience.",
-                service3Title: "Dedicated Support",
-                service3Desc: "A dedicated team ready to assist you round the clock with any challenges.",
+                servicesTitle: "Our Services",
+                service1Title: "Export Services",
+                service1Desc: "We export high-quality industrial goods from Turkey to international markets. Our export operations are designed for reliability, flexibility, and efficiency.",
+                service2Title: "Import Services",
+                service2Desc: "Birlik provides import solutions for clients in Turkey who require international materials or products.",
+                service3Title: "Custom Trade Solutions",
+                service3Desc: "Birlik offers tailored import/export solutions based on your needs.",
                 contactTitle: "Contact Information",
                 address: "Sample District, Business Street No:1, Istanbul",
                 footerRights: "All rights reserved."
